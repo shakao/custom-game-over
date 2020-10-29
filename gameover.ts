@@ -112,6 +112,17 @@ namespace game {
             if (scoreInfo.score > highScore)
                 info.saveHighScore();
 
+            pushScene();
+            scene.setBackgroundImage(screen.clone());
+
+            if (win)
+                music.jumpUp.play();
+            else
+                music.wawawawaa.play();
+
+            let effect = win ? winEffect : loseEffect;
+            effect.startScreenEffect();
+
             pause(400);
 
             const overDialog = new CustomGameOverDialog(win, scoreInfo.score, highScore);
