@@ -1,0 +1,30 @@
+{
+    "name": "custom-game-over",
+    "description": "",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "gameover.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "test.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v1.2.6",
+        "tag": "v1.2.6",
+        "commits": "https://github.com/microsoft/pxt-arcade/commits/7f343e1ba30a4c31de6b7b14d288d34b2741b2f4",
+        "target": "1.2.6",
+        "pxt": "6.2.21",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj"
+}
