@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.2.6/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.3","target":"arcade","targetVersion":"1.2.6","repo":"shakao/custom-game-over"}
-// total=1401238 new=6.43% cached=88.05% other=5.52%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.2.6/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.4","target":"arcade","targetVersion":"1.2.6","repo":"shakao/custom-game-over"}
+// total=1401521 new=6.45% cached=88.03% other=5.52%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -443,7 +443,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P96772(s) {
+function _main___P100274(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -831,15 +831,18 @@ switch (step) {
     s.callLocIdx = 62; s.pc = 34; return s.tmp_0;
   case 34:
     r0 = s.retval;
-    r0 = pxsim.image.ofBuffer(_hex96419);
-    globals.baseDialogFrame___96420 = (r0);
-    r0 = pxsim_ImageMethods.clone(globals.baseDialogFrame___96420);
-    globals.gameOverDialogWinFrame___96423 = (r0);
-    r0 = pxsim_ImageMethods.clone(globals.baseDialogFrame___96420);
-    globals.gameOverDialogLoseFrame___96427 = (r0);
-    globals.gameOverWinText___96430 = ("YOU WIN!");
-    globals.gameOverLoseText___96431 = ("GAME OVER!");
-    s.tmp_0 = game_customGameOver__P96561_mk(s);
+    r0 = pxsim.image.ofBuffer(_hex99962);
+    globals.baseDialogFrame___99963 = (r0);
+    r0 = pxsim_ImageMethods.clone(globals.baseDialogFrame___99963);
+    globals.gameOverDialogWinFrame___99966 = (r0);
+    r0 = pxsim_ImageMethods.replace(globals.gameOverDialogWinFrame___99966, 1, 0);
+    r0 = pxsim_ImageMethods.replace(globals.gameOverDialogWinFrame___99966, 15, 1);
+    r0 = pxsim_ImageMethods.replace(globals.gameOverDialogWinFrame___99966, 0, 15);
+    r0 = pxsim_ImageMethods.clone(globals.baseDialogFrame___99963);
+    globals.gameOverDialogLoseFrame___99979 = (r0);
+    globals.gameOverWinText___99982 = ("YOU WIN!");
+    globals.gameOverLoseText___99983 = ("GAME OVER!");
+    s.tmp_0 = game_customGameOver__P99993_mk(s);
     s.callLocIdx = 85; s.pc = 35; return s.tmp_0;
   case 35:
     r0 = s.retval;
@@ -847,13 +850,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P96772.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"gameover.ts","functionName":"<main>","argumentNames":[]}
-_main___P96772.continuations = [  ]
+_main___P100274.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"gameover.ts","functionName":"<main>","argumentNames":[]}
+_main___P100274.continuations = [  ]
 
-function _main___P96772_mk(s) {
+function _main___P100274_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P96772, depth: s.depth + 1,
+        parent: s, fn: _main___P100274, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -879,7 +882,7 @@ const _hex79250 = pxsim.BufferMethods.createBufferFromHex("870420002000000000000
 const _hex79252 = pxsim.BufferMethods.createBufferFromHex("870420002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000cc00000000000000b0bbbbbbbbcb00c0cd000000000000001bddddddddbd0c1ccd000000000000b011cbccccccbc0c1ccd000000000000b01d6c666666bc0cbccd000000000000b01d6c616661bc0c1ccd000000000000b01d6c161666bccc1bcd000000000000b01d6c666166bcccbbcd000000000000b01d6c666666bccc1bcd000000000000b01d6c666661bccc1bcd000000000000b01d6c666661bcccbbcd000000000000b01d6c666661bccc1bcd000000000000b01d6c666666bc0c1ccd000000000000b01dcbccccccbc0cbccd000000000000c0b1bbbbbbbbbb0cdccb000000000000c0bbbbbbbbbbcb00dc0c00000000000000cccccccccc0c00cc000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex79254 = pxsim.BufferMethods.createBufferFromHex("87042000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004004000000000000000000000000000054450000000000000000000000440b00bbbb00b0440000000000000040550b00000000b0550400000000000040b5000044bb00005b04000000000000b00b0044ddddbb00b00b0000000000000000405d55d5dd0b00000000000000000000d4555555ddbd0000000000000000000054555555d5bd0000000000000000b44055555555d5dd0b4b000000000040b54055555555d5dd0b5b040000000040b54055555555d5dd0b5b040000000000b44055115555d5dd0b4b000000000000000054115555d5bd00000000000000000000d4555555ddbd00000000000000000000405d55d5dd0b0000000000000000b00b0044ddddbb00b00b00000000000040b5000044bb00005b0400000000000040550b00000000b0550400000000000000440b00bbbb00b0440000000000000000000000544500000000000000000000000000004004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex79256 = pxsim.BufferMethods.createBufferFromHex("870420002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bbbb00000000000000000000000000b055bb00bbbbbb000000000000000000b0b5bdbcbbbbddcb0000000000000000b0dbcb5b5555bbdd0c00000000000000b0cbdcbdbb5b55dbcd0000000000000000c0dddb11d15bb5bd0c00000000000000bbbd111111b155bb0c00000000000000db1b111111115bb5cb00000000000000db1bb11d1199b9d5cb00000000000000db1b11bb9199b955cb000000000000005b1b11b19b99995bcb000000000000005b1d1111bb99995ccb00000000000000b0b511bbbb99995ccb00000000000000b0d51d919999d95b0b00000000000000005bdb919999c9d50b0000000000000000b0d51b99d9bcb5000000000000000000005bd5bbbc550b00000000000000000000b05b5555bd000000000000000000000000b0bbbb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
-const _hex96419 = pxsim.BufferMethods.createBufferFromHex("8704030003000000f1010000f1010000f1010000")
+const _hex99962 = pxsim.BufferMethods.createBufferFromHex("8704030003000000f1010000f1010000f1010000")
 
 
 
@@ -1442,7 +1445,7 @@ function inline__P79404_mk(s) {
 
 
 
-function game_customGameOver__P96561(s) {
+function game_customGameOver__P99993(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1453,7 +1456,7 @@ switch (step) {
   case 0:
 
     s.tmp_0 = game_onGameOver__P77649_mk(s);
-    s.tmp_0.arg0 = inline__P96563;
+    s.tmp_0.arg0 = inline__P99996;
     s.callLocIdx = 84; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -1461,12 +1464,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-game_customGameOver__P96561.info = {"start":3301,"length":1216,"line":106,"column":4,"endLine":142,"endColumn":5,"fileName":"gameover.ts","functionName":"customGameOver","argumentNames":[]}
+game_customGameOver__P99993.info = {"start":3429,"length":1216,"line":109,"column":4,"endLine":145,"endColumn":5,"fileName":"gameover.ts","functionName":"customGameOver","argumentNames":[]}
 
-function game_customGameOver__P96561_mk(s) {
+function game_customGameOver__P99993_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: game_customGameOver__P96561, depth: s.depth + 1,
+        parent: s, fn: game_customGameOver__P99993, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1475,7 +1478,7 @@ function game_customGameOver__P96561_mk(s) {
 
 
 
-function inline__P96563(s) {
+function inline__P99996(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1485,10 +1488,10 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.scoreInfo___96565 = undefined;
-    s.highScore___96569 = undefined;
-    s.effect___96587 = undefined;
-    s.overDialog___96594 = undefined;
+    s.scoreInfo___99998 = undefined;
+    s.highScore___100002 = undefined;
+    s.effect___100020 = undefined;
+    s.overDialog___100027 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -1498,15 +1501,15 @@ switch (step) {
     s.callLocIdx = 70; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    s.scoreInfo___96565 = (r0);
+    s.scoreInfo___99998 = (r0);
     s.tmp_0 = info_highScore__P77313_mk(s);
     s.callLocIdx = 71; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    s.highScore___96569 = (r0);
-    r0 = s.scoreInfo___96565.fields["score"];
+    s.highScore___100002 = (r0);
+    r0 = s.scoreInfo___99998.fields["score"];
     s.tmp_1 = r0;
-    r0 = (s.tmp_1 > s.highScore___96569);
+    r0 = (s.tmp_1 > s.highScore___100002);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -1552,9 +1555,9 @@ switch (step) {
   case 6:
     // jmp value (already in r0)
     s.tmp_0 = r0;
-    s.effect___96587 = (s.tmp_0);
+    s.effect___100020 = (s.tmp_0);
     s.tmp_0 = if_startScreenEffect_1_mk(s);
-    s.tmp_0.arg0 = s.effect___96587;
+    s.tmp_0.arg0 = s.effect___100020;
     if (!s.tmp_0.arg0.vtable.iface) {
       setupLambda(s.tmp_0, pxsim_pxtrt.mapGetByString(s.tmp_0.arg0, "startScreenEffect"), 1);
       s.callLocIdx = 77; s.pc = 14; return s.tmp_0;
@@ -1571,21 +1574,21 @@ switch (step) {
     s.callLocIdx = 78; s.pc = 15; return s.tmp_0;
   case 15:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkClassInstance(game_CustomGameOverDialog__C96432_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(game_CustomGameOverDialog__C99984_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = game_CustomGameOverDialog_constructor__P96437_mk(s);
+    s.tmp_1 = game_CustomGameOverDialog_constructor__P99989_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
-    r0 = s.scoreInfo___96565.fields["score"];
+    r0 = s.scoreInfo___99998.fields["score"];
     s.tmp_1.arg2 = r0;
-    s.tmp_1.arg3 = s.highScore___96569;
+    s.tmp_1.arg3 = s.highScore___100002;
     s.callLocIdx = 79; s.pc = 16; return s.tmp_1;
   case 16:
     r0 = s.retval;
-    s.overDialog___96594 = (s.tmp_0);
-    r0 = pxsim_pxtcore_mkAction(1, inline__P96604);
+    s.overDialog___100027 = (s.tmp_0);
+    r0 = pxsim_pxtcore_mkAction(1, inline__P100037);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.overDialog___96594);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.overDialog___100027);
     s.tmp_1 = scene_createRenderable__P77491_mk(s);
     s.tmp_1.arg0 = 100;
     s.tmp_1.arg1 = s.tmp_0;
@@ -1598,8 +1601,8 @@ switch (step) {
     s.callLocIdx = 81; s.pc = 18; return s.tmp_0;
   case 18:
     r0 = s.retval;
-    s.tmp_0 = game_CustomGameOverDialog_displayCursor__P96434_mk(s);
-    s.tmp_0.arg0 = s.overDialog___96594;
+    s.tmp_0 = game_CustomGameOverDialog_displayCursor__P99986_mk(s);
+    s.tmp_0.arg0 = s.overDialog___100027;
     s.callLocIdx = 82; s.pc = 19; return s.tmp_0;
   case 19:
     r0 = s.retval;
@@ -1617,20 +1620,20 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P96563.info = {"start":3360,"length":1150,"line":107,"column":24,"endLine":141,"endColumn":9,"fileName":"gameover.ts","functionName":"inline","argumentNames":["win"]}
+inline__P99996.info = {"start":3488,"length":1150,"line":110,"column":24,"endLine":144,"endColumn":9,"fileName":"gameover.ts","functionName":"inline","argumentNames":["win"]}
 
-function inline__P96563_mk(s) {
+function inline__P99996_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P96563, depth: s.depth + 1,
+        parent: s, fn: inline__P99996, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  scoreInfo___96565: undefined,
-  highScore___96569: undefined,
-  effect___96587: undefined,
-  overDialog___96594: undefined,
+  scoreInfo___99998: undefined,
+  highScore___100002: undefined,
+  effect___100020: undefined,
+  overDialog___100027: undefined,
   arg0: undefined,
 } }
 
@@ -1638,7 +1641,7 @@ function inline__P96563_mk(s) {
 
 
 
-function inline__P96604(s) {
+function inline__P100037(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1652,9 +1655,9 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = game_CustomGameOverDialog__C96432_v0_1_mk(s);
+    s.tmp_0 = game_CustomGameOverDialog__C99984_v0_1_mk(s);
     s.tmp_0.arg0 = s.caps[0];
-    if (!checkSubtype(s.tmp_0.arg0, game_CustomGameOverDialog__C96432_VT)) failedCast(s.tmp_0.arg0);
+    if (!checkSubtype(s.tmp_0.arg0, game_CustomGameOverDialog__C99984_VT)) failedCast(s.tmp_0.arg0);
     s.tmp_0.fn = s.tmp_0.arg0.vtable.methods.update;
     s.pc = 1; return s.tmp_0;
   case 1:
@@ -1677,12 +1680,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P96604.info = {"start":4081,"length":254,"line":128,"column":48,"endLine":135,"endColumn":13,"fileName":"gameover.ts","functionName":"inline","argumentNames":["target"]}
+inline__P100037.info = {"start":4209,"length":254,"line":131,"column":48,"endLine":138,"endColumn":13,"fileName":"gameover.ts","functionName":"inline","argumentNames":["target"]}
 
-function inline__P96604_mk(s) {
+function inline__P100037_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P96604, depth: s.depth + 1,
+        parent: s, fn: inline__P100037, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1742,7 +1745,7 @@ function game_waitAnyButton__P77642_mk(s) {
 
 
 
-function game_CustomGameOverDialog_displayCursor__P96434(s) {
+function game_CustomGameOverDialog_displayCursor__P99986(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1757,18 +1760,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, game_CustomGameOverDialog__C96432_VT)) failedCast(r0);
+    if (!checkSubtype(r0, game_CustomGameOverDialog__C99984_VT)) failedCast(r0);
     r0 = (s.arg0).fields["cursorOn"] = (true);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-game_CustomGameOverDialog_displayCursor__P96434.info = {"start":824,"length":61,"line":27,"column":8,"endLine":29,"endColumn":9,"fileName":"gameover.ts","functionName":"displayCursor","argumentNames":["this"]}
+game_CustomGameOverDialog_displayCursor__P99986.info = {"start":952,"length":61,"line":30,"column":8,"endLine":32,"endColumn":9,"fileName":"gameover.ts","functionName":"displayCursor","argumentNames":["this"]}
 
-function game_CustomGameOverDialog_displayCursor__P96434_mk(s) {
+function game_CustomGameOverDialog_displayCursor__P99986_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: game_CustomGameOverDialog_displayCursor__P96434, depth: s.depth + 1,
+        parent: s, fn: game_CustomGameOverDialog_displayCursor__P99986, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -1777,7 +1780,7 @@ function game_CustomGameOverDialog_displayCursor__P96434_mk(s) {
 
 
 
-function game_CustomGameOverDialog_update__P96435(s) {
+function game_CustomGameOverDialog_update__P99987(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1792,15 +1795,15 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, game_CustomGameOverDialog__C96432_VT)) failedCast(r0);
+    if (!checkSubtype(r0, game_CustomGameOverDialog__C99984_VT)) failedCast(r0);
     s.tmp_0 = game_BaseDialog_clearInterior__P78937_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 64; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.tmp_0 = game_CustomGameOverDialog__C96432_v1_1_mk(s);
+    s.tmp_0 = game_CustomGameOverDialog__C99984_v1_1_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    if (!checkSubtype(s.tmp_0.arg0, game_CustomGameOverDialog__C96432_VT)) failedCast(s.tmp_0.arg0);
+    if (!checkSubtype(s.tmp_0.arg0, game_CustomGameOverDialog__C99984_VT)) failedCast(s.tmp_0.arg0);
     s.tmp_0.fn = s.tmp_0.arg0.vtable.methods.drawTextCore;
     s.pc = 4; return s.tmp_0;
   case 4:
@@ -1820,12 +1823,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-game_CustomGameOverDialog_update__P96435.info = {"start":895,"length":173,"line":31,"column":8,"endLine":38,"endColumn":9,"fileName":"gameover.ts","functionName":"update","argumentNames":["this"]}
+game_CustomGameOverDialog_update__P99987.info = {"start":1023,"length":173,"line":34,"column":8,"endLine":41,"endColumn":9,"fileName":"gameover.ts","functionName":"update","argumentNames":["this"]}
 
-function game_CustomGameOverDialog_update__P96435_mk(s) {
+function game_CustomGameOverDialog_update__P99987_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: game_CustomGameOverDialog_update__P96435, depth: s.depth + 1,
+        parent: s, fn: game_CustomGameOverDialog_update__P99987, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -2114,7 +2117,7 @@ function game_BaseDialog_cursorRowHeight__P78939_mk(s) {
 
 
 
-function game_CustomGameOverDialog_drawTextCore__P96436(s) {
+function game_CustomGameOverDialog_drawTextCore__P99988(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -2124,21 +2127,21 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.scoreColor___96500 = undefined;
+    s.scoreColor___100102 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, game_CustomGameOverDialog__C96432_VT)) failedCast(r0);
+    if (!checkSubtype(r0, game_CustomGameOverDialog__C99984_VT)) failedCast(r0);
     r0 = s.arg0.fields["win"];
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = globals.gameOverWinText___96430;
+    r0 = globals.gameOverWinText___99982;
     { step = 2; continue; }
   case 1:
-    r0 = globals.gameOverLoseText___96431;
+    r0 = globals.gameOverLoseText___99983;
   case 2:
     // jmp value (already in r0)
     s.tmp_1 = r0;
@@ -2180,7 +2183,7 @@ switch (step) {
   case 6:
     // jmp value (already in r0)
     s.tmp_3 = r0;
-    s.scoreColor___96500 = (s.tmp_3);
+    s.scoreColor___100102 = (s.tmp_3);
     s.tmp_0 = helpers_imagePrintCenter__P76867_mk(s);
     r0 = s.arg0.fields["image"];
     s.tmp_0.arg0 = r0;
@@ -2198,7 +2201,7 @@ switch (step) {
     r0 = pxsim_String__concat("Score:", s.tmp_1);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 23;
-    s.tmp_0.arg3 = s.scoreColor___96500;
+    s.tmp_0.arg3 = s.scoreColor___100102;
     s.tmp_0.arg4 = globals.font8___76853;
     s.callLocIdx = 67; s.pc = 12; return s.tmp_0;
   case 12:
@@ -2212,7 +2215,7 @@ switch (step) {
     s.tmp_1.arg0 = r0;
     s.tmp_1.arg1 = "New High Score!";
     s.tmp_1.arg2 = 34;
-    s.tmp_1.arg3 = s.scoreColor___96500;
+    s.tmp_1.arg3 = s.scoreColor___100102;
     s.tmp_1.arg4 = globals.font5___76858;
     s.callLocIdx = 68; s.pc = 14; return s.tmp_1;
   case 14:
@@ -2236,7 +2239,7 @@ switch (step) {
     r0 = pxsim_String__concat("HI", s.tmp_1);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 34;
-    s.tmp_0.arg3 = s.scoreColor___96500;
+    s.tmp_0.arg3 = s.scoreColor___100102;
     s.tmp_0.arg4 = globals.font8___76853;
     s.callLocIdx = 69; s.pc = 15; return s.tmp_0;
   case 15:
@@ -2248,19 +2251,19 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-game_CustomGameOverDialog_drawTextCore__P96436.info = {"start":1078,"length":1275,"line":40,"column":8,"endLine":78,"endColumn":9,"fileName":"gameover.ts","functionName":"drawTextCore","argumentNames":["this"]}
+game_CustomGameOverDialog_drawTextCore__P99988.info = {"start":1206,"length":1275,"line":43,"column":8,"endLine":81,"endColumn":9,"fileName":"gameover.ts","functionName":"drawTextCore","argumentNames":["this"]}
 
-function game_CustomGameOverDialog_drawTextCore__P96436_mk(s) {
+function game_CustomGameOverDialog_drawTextCore__P99988_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: game_CustomGameOverDialog_drawTextCore__P96436, depth: s.depth + 1,
+        parent: s, fn: game_CustomGameOverDialog_drawTextCore__P99988, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  scoreColor___96500: undefined,
+  scoreColor___100102: undefined,
   arg0: undefined,
 } }
 
@@ -3909,7 +3912,7 @@ function sprites_BaseSprite_z__P76970_mk(s) {
 
 
 
-function game_CustomGameOverDialog_constructor__P96437(s) {
+function game_CustomGameOverDialog_constructor__P99989(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3927,16 +3930,16 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, game_CustomGameOverDialog__C96432_VT)) failedCast(r0);
+    if (!checkSubtype(r0, game_CustomGameOverDialog__C99984_VT)) failedCast(r0);
     r0 = (s.arg0).fields["win"] = (s.arg1);
     r0 = (s.arg0).fields["score"] = (s.arg2);
     r0 = (s.arg0).fields["highScore"] = (s.arg3);
     r0 = pxsim_numops_toBoolDecr(s.arg1);
     if (!r0) { step = 1; continue; }
-    r0 = globals.gameOverDialogWinFrame___96423;
+    r0 = globals.gameOverDialogWinFrame___99966;
     { step = 2; continue; }
   case 1:
-    r0 = globals.gameOverDialogLoseFrame___96427;
+    r0 = globals.gameOverDialogLoseFrame___99979;
   case 2:
     // jmp value (already in r0)
     s.tmp_0 = r0;
@@ -3964,12 +3967,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-game_CustomGameOverDialog_constructor__P96437.info = {"start":474,"length":340,"line":17,"column":8,"endLine":25,"endColumn":9,"fileName":"gameover.ts","functionName":"inline","argumentNames":["this","win","score","highScore"]}
+game_CustomGameOverDialog_constructor__P99989.info = {"start":602,"length":340,"line":20,"column":8,"endLine":28,"endColumn":9,"fileName":"gameover.ts","functionName":"inline","argumentNames":["this","win","score","highScore"]}
 
-function game_CustomGameOverDialog_constructor__P96437_mk(s) {
+function game_CustomGameOverDialog_constructor__P99989_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: game_CustomGameOverDialog_constructor__P96437, depth: s.depth + 1,
+        parent: s, fn: game_CustomGameOverDialog_constructor__P99989, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -46196,7 +46199,7 @@ function if_up_2_mk(s) {
 } }
 
 
-function game_CustomGameOverDialog__C96432_v0_1_mk(s) {
+function game_CustomGameOverDialog__C99984_v0_1_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -46210,7 +46213,7 @@ function game_CustomGameOverDialog__C96432_v0_1_mk(s) {
 } }
 
 
-function game_CustomGameOverDialog__C96432_v1_1_mk(s) {
+function game_CustomGameOverDialog__C99984_v1_1_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -46451,15 +46454,15 @@ const game_BaseDialog__C77585_VT = mkVTable({
     "textAreaHeight": game_BaseDialog_textAreaHeight__P78942,
   },
 });
-const game_CustomGameOverDialog__C96432_VT = mkVTable({
+const game_CustomGameOverDialog__C99984_VT = mkVTable({
   name: "CustomGameOverDialog",
   numFields: 16,
   classNo: 23,
   lastSubtypeNo: 23,
   maxBgInstances: null,
   methods: {
-    "update": game_CustomGameOverDialog_update__P96435,
-    "drawTextCore": game_CustomGameOverDialog_drawTextCore__P96436,
+    "update": game_CustomGameOverDialog_update__P99987,
+    "drawTextCore": game_CustomGameOverDialog_drawTextCore__P99988,
   },
   iface: {
     "image": null,
@@ -46494,9 +46497,9 @@ const game_CustomGameOverDialog__C96432_VT = mkVTable({
     "set/score": null,
     "highScore": null,
     "set/highScore": null,
-    "displayCursor": game_CustomGameOverDialog_displayCursor__P96434,
-    "update": game_CustomGameOverDialog_update__P96435,
-    "drawTextCore": game_CustomGameOverDialog_drawTextCore__P96436,
+    "displayCursor": game_CustomGameOverDialog_displayCursor__P99986,
+    "update": game_CustomGameOverDialog_update__P99987,
+    "drawTextCore": game_CustomGameOverDialog_drawTextCore__P99988,
     "drawCursorRow": game_BaseDialog_drawCursorRow__P77601,
     "drawBorder": game_BaseDialog_drawBorder__P78935,
     "fastFill": game_BaseDialog_fastFill__P78936,
@@ -47741,7 +47744,7 @@ const effects_SceneAnchor__C79360_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["baseDialogFrame___96420","gameOverDialogWinFrame___96423","gameOverDialogLoseFrame___96427","gameOverWinText___96430","gameOverLoseText___96431"])
+const breakpoints = setupDebugger(1, ["baseDialogFrame___99963","gameOverDialogWinFrame___99966","gameOverDialogLoseFrame___99979","gameOverWinText___99982","gameOverLoseText___99983"])
 
-return _main___P96772
+return _main___P100274
 })
