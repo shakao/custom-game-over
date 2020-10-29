@@ -7,8 +7,6 @@
     "files": [
         "README.md",
         "gameover.ts",
-        "tilemap.g.jres",
-        "tilemap.g.ts",
         "test.ts"
     ],
     "testFiles": [
