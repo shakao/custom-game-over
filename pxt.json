@@ -7,12 +7,9 @@
     },
     "files": [
         "README.md",
-        "gameover.ts",
-        "test.ts"
+        "gameover.ts"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
+    "testFiles": [],
     "targetVersions": {
         "branch": "v1.2.6",
         "tag": "v1.2.6",

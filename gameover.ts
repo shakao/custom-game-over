@@ -104,29 +104,32 @@ namespace game {
         gameOverLoseText = text;
     }
 
-    game.onGameOver((win: boolean) => {
-        // collect the scores before poping the scenes
-        const scoreInfo = info.player1.getState();
-        const highScore = info.highScore();
-        if (scoreInfo.score > highScore)
-            info.saveHighScore();
+    export function customGameOver() {
+        game.onGameOver((win: boolean) => {
+            // collect the scores before poping the scenes
+            const scoreInfo = info.player1.getState();
+            const highScore = info.highScore();
+            if (scoreInfo.score > highScore)
+                info.saveHighScore();
 
-        pause(400);
+            pause(400);
 
-        const overDialog = new CustomGameOverDialog(win, scoreInfo.score, highScore);
-        scene.createRenderable(scene.HUD_Z, target => {
-            overDialog.update();
-            target.drawTransparentImage(
-                overDialog.image,
-                0,
-                (screen.height - overDialog.image.height) >> 1
-            );
-        });
+            const overDialog = new CustomGameOverDialog(win, scoreInfo.score, highScore);
+            scene.createRenderable(scene.HUD_Z, target => {
+                overDialog.update();
+                target.drawTransparentImage(
+                    overDialog.image,
+                    0,
+                    (screen.height - overDialog.image.height) >> 1
+                );
+            });
 
-        pause(500); // wait for users to stop pressing keys
-        overDialog.displayCursor();
-        waitAnyButton();
-        control.reset();
-    })
-
+            pause(500); // wait for users to stop pressing keys
+            overDialog.displayCursor();
+            waitAnyButton();
+            control.reset();
+        })
+    }
 }
+
+game.customGameOver();
