@@ -6,6 +6,9 @@ namespace game {
             1 1 1
             `;
     let gameOverDialogWinFrame: Image = baseDialogFrame.clone();
+    gameOverDialogWinFrame.replace(1, 0);
+    gameOverDialogWinFrame.replace(15, 1);
+    gameOverDialogWinFrame.replace(0, 15);
     let gameOverDialogLoseFrame: Image = baseDialogFrame.clone();
 
     let gameOverWinText = "YOU WIN!"
