@@ -5,7 +5,6 @@
         "device": "*"
     },
     "files": [
-        "main.ts",
         "README.md",
         "gameover.ts",
         "tilemap.g.jres",
